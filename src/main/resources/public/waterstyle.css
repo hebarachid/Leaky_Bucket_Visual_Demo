@@ -1,0 +1,32 @@
+.wave{
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    animation: waves 2.4s linear infinite;
+    left: -150px;
+    bottom: -150px;
+    border-radius: 33%;
+    background: lightblue;
+    transition: all 1.4s linear;
+}
+.lightblue{
+    background: linear-gradient(
+        to right,#eaecc6,#2bc0e4
+    );
+}
+
+@keyframes waves{
+    0%{
+        transform: rotate(0);
+        border-radius: 30%;
+        bottom: -400px;
+    }
+    45%{
+        border-radius: 39%;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 30%;
+        bottom: -80px;  
+    }
+}

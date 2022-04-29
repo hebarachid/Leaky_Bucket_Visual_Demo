@@ -1,0 +1,357 @@
+header {
+  padding-top: 20px;
+  text-align: center;
+}
+header h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.valve {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.valve .circle {
+  background: #485f6d;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+}
+.valve .circle .inner-circle:before, .valve .circle .inner-circle:after {
+  content: '';
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+.valve .circle .inner-circle:before {
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+}
+.valve .circle .inner-circle:after {
+  background: #60b0b7;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+}
+.valve .valve-pipe {
+  width: 12px;
+  height: 90px;
+  background: #485f6d;
+  position: absolute;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  border-radius: 25%;
+}
+.valve .valve-pipe:before, .valve .valve-pipe:after {
+  content: '';
+  display: inline-block;
+  background: #485f6d;
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+}
+.valve .valve-pipe:before {
+  top: -5px;
+}
+.valve .valve-pipe:after {
+  top: 70px;
+}
+.valve .valve-pipe.vertical {
+  bottom: -30px;
+  left: 10px;
+}
+.valve .valve-pipe.horizontal {
+  top: -29px;
+  left: 9px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.water-sink {
+  position: absolute;
+  top: 22px;
+  z-index: 11;
+}
+.water-sink .main-pipe {
+  width: 350px;
+  height: 20px;
+  background: #60b0b7;
+  position: absolute;
+  z-index: 1;
+}
+.water-sink .main-pipe:after {
+  content: '';
+  height: 40px;
+  width: 20px;
+  background: #60b0b7;
+  position: absolute;
+  left: 350px;
+  border-top-right-radius: 10px;
+}
+.water-sink .main-pipe:before {
+  content: '';
+  height: 40px;
+  width: 10px;
+  background: #60b0b7;
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+.water-sink .middle-part {
+  width: 32px;
+  height: 32px;
+  background: #485f6d;
+  position: absolute;
+  top: -6px;
+  left: 3px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  z-index: 2;
+}
+.water-sink .left-part {
+  width: 15px;
+  height: 40px;
+  background: #485f6d;
+  position: absolute;
+  top: -10px;
+  z-index: 2;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.water-sink .right-part {
+  background: #485f6d;
+  width: 30px;
+  height: 15px;
+  position: absolute;
+  top: 35px;
+  left: 345px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 3;
+}
+.water-sink .valve-part {
+  width: 60px;
+  height: 6px;
+  background: #485f6d;
+  position: absolute;
+  top: -36px;
+  left: 24px;
+  z-index: 3;
+}
+.water-sink .valve-part:before, .water-sink .valve-part:after {
+  content: '';
+  width: 20px;
+  height: 12px;
+  background: #485f6d;
+  position: absolute;
+  top: -2px;
+  left: -5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+}
+.water-sink .valve-part:after {
+  left: 45px;
+}
+.water-sink .small-top-part {
+  width: 6px;
+  height: 6px;
+  background: #485f6d;
+  position: absolute;
+  top: -43px;
+  left: 52px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.pipe {
+  background: #fff;
+  border: 2px solid #ccc;
+  position: absolute;
+}
+.pipe .water-fill {
+  background: #9cc6ff;
+  position: absolute;
+}
+.pipe.pipe-vertical {
+  width: 20px;
+  height: 45px;
+  top: 413px;
+  border-bottom: none;
+  border-top: none;
+  z-index: 12;
+}
+.pipe.pipe-vertical-first {
+  left: 370px;
+}
+.main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  height: 100%;
+}
+.glass-container {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  width: 250px;
+  border: 1px solid #bbb;
+  border-top: 1px solid #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px 5px 30px;
+}
+.glass-container:first-child {
+  top: 127px;
+  left: 248px;
+}
+.glass-container:nth-child(2) {
+  top: 207px;
+  left: 572px;
+}
+.glass-container:nth-child(3) {
+  top: 47px;
+  left: 907px;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.50);
+  border-top: none;
+
+  width: 238px;
+  border: 1px solid #bbb;
+  border-top: 1px solid #eee;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.glass-first {
+  height: 250px;
+}
+
+.glass .line {
+  width: 236px;
+  height: 1px;
+  border-top: 1px dotted #ccc;
+  position: absolute;
+}
+.glass .line.one-litter:after, .glass .line.two-litter:after, .glass .line.three-litter:after, .glass .line.fourth-litter:after {
+  float: right;
+  margin-right: 5px;
+  color: #ccc;
+}
+.glass .line.one-litter {
+  bottom: 80px;
+}
+.glass .line.one-litter:after {
+  content: "1l";
+}
+.glass .line.two-litter {
+  bottom: 160px;
+}
+.glass .line.two-litter:after {
+  content: "2l";
+}
+.glass .line.three-litter {
+  bottom: 240px;
+}
+.glass .line.three-litter:after {
+  content: "3l";
+}
+.glass .line.fourth-litter {
+  bottom: 320px;
+}
+.glass .line.fourth-litter:after {
+  content: "4l";
+}
+.glass .water {
+  width: 236px;
+  background-color: #9cc6ff;
+  position: absolute;
+  bottom: 0px;
+  height: 0;
+  -webkit-transition: all 4s ease-out;
+  -moz-transition: all 4s ease-out;
+  -ms-transition: all 4s ease-out;
+  transition: all 4s ease-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+.glass .water.water-anim {
+  height: 100%;
+  background-position: top left;
+}
+
+/* Start animations */
+.valve-rotate {
+  -webkit-animation: spin 2s linear;
+  -moz-animation: spin 2s linear;
+  animation: spin 2s linear;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(180deg);
+ }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(180deg);
+ }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+ }
+}
+.valve-rotate-reverce {
+  -webkit-animation: spinReverce 2s linear;
+  -moz-animation: spinReverce 2s linear;
+  animation: spinReverce 2s linear;
+}
+@-moz-keyframes spinReverce {
+  100% {
+    -moz-transform: rotate(-180deg);
+ }
+}
+@-webkit-keyframes spinReverce {
+  100% {
+    -webkit-transform: rotate(-180deg);
+ }
+}
+@keyframes spinReverce {
+  100% {
+    transform: rotate(-180deg);
+ }
+}
