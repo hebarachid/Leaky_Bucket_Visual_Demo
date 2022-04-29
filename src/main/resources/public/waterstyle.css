@@ -19,7 +19,7 @@
     0%{
         transform: rotate(0);
         border-radius: 30%;
-        bottom: -400px;
+    /*    bottom: -400px;*/
     }
     45%{
         border-radius: 39%;
@@ -27,6 +27,7 @@
     100%{
         transform: rotate(360deg);
         border-radius: 30%;
-        bottom: -80px;  
+        /*bottom: -80px;  */
     }
 }
+

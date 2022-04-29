@@ -6,23 +6,10 @@
     <link rel="stylesheet" href="sinkstyle.css">
     <link rel="stylesheet" href="waterstyle.css">
     <link rel="stylesheet" href="formstyle.css">
-    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >Leaky Bucket</title>
 </head>
 <body>
-    <!-- Header -->
-<header>
-    <h3>turn the valve</h3>
-    <div class="valve">
-      <div class="circle">
-        <div class="inner-circle"></div>
-      </div>
-      <div class="valve-pipe vertical"></div>
-      <div class="valve-pipe horizontal"></div>
-    </div>
-  </header>
-  
   <!-- Main -->
   <section class="main" style="width: 100%;">
     <!-- Water Sink -->
@@ -39,7 +26,7 @@
     <div class="glasses" >
       <div class="glass-container">
         <div class="glass glass-first">
-          <div class="wave lightblue"></div>
+          <div class="wave lightblue" id="jad"></div>
           <div class="line one-litter"></div>
           <div class="line two-litter"></div>
           <div class="line three-litter"></div>
@@ -57,10 +44,8 @@
             <!--     Start  header Content  -->
             <header class="head-form">
                <h2>Leaky Bucket</h2>
-               <!--     A welcome message or an explanation of the login form -->
-               <p>Answer the following questions</p>
                <br>
-               <ol>
+               <ul>
                 <li>Enter the number of packets</li>
                 <input class="form-input" name="n" id="txt-input1" type="text" placeholder="packets" required>
                 <li>Enter the output rate of the bucket</li>
@@ -69,17 +54,83 @@
                 <input class="form-input" name="bsize" id="txt-input3" type="text" placeholder="size" required>
                 <li>Enter the size of the arriving packets in order</li>
                 <input class="form-input" name="pkt" id="txt-input4" type="text" placeholder="order of packets" required>
-                <br>
-                <button  onclick="sendData()">Submit</button>
-              </ol>
+                <br><br>
+                   <div style="display: flex;flex-direction: row; justify-content: start;gap: 10px;">
+                       <button  onclick="sendData()">Submit</button>
+                       <button onclick="fetchandstart()">Start</button>
+                   </div>
+
+              </ul>
             </header>
             <!--     End  header Content  -->
            
 
            <!-- End Form -->
          </form>
+          <br>
     </div>
     </div>
   </section>
+  <p id="showData"></p>
 </body>
+<script src="script.js"></script>
+<style>
+    button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus {
+  background-color: #F082AC;
+}
+ul {
+    text-align: left;
+    list-style-type: none;
+}
+ table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ td,  th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+ tr {background-color: #f2f2f2;}
+
+ tr:hover {background-color: #ddd;}
+
+ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #EA4C89;
+  color: white;
+}
+</style>
 </html>
